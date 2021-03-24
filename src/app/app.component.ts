@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'To Do List';
+  newTodoLabel: string = '';
   todos = [
     { 
       label: 'Pay to Mike', 
@@ -24,4 +25,25 @@ export class AppComponent {
       priority: 3
     },
   ];
+
+  addTodo(newTodoLabel: string) {
+    var newTodo = {
+      label: newTodoLabel,
+      priority: 1,
+      done: false
+    };
+    this.todos.push(newTodo);
+  }
+
+  deleteTodo(todo: any){
+    this.todos = this.todos.filter (t => t.label !== todo.label );
+  }
+
+  updateDone(todo: any){
+    if (todo.done){
+      todo.done = false;
+    } else {
+      todo.done = true;
+    }
+  }
 }

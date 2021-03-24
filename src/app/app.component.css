@@ -1,0 +1,74 @@
+.head {
+    color: blue;
+    font-weight: bold;
+    background: lightpink;
+}
+
+.body {
+    font-weight: bold;
+    background: lightblue;
+}
+
+td {
+    padding: 5px;
+    text-align: center;
+}
+
+h1 {
+    margin-left: 10px;
+}
+
+input {
+    height: 20px;
+    width: 200px;
+    margin-left: 10px;
+}
+
+.add_button {
+    height: 30px;
+    width: 75px;
+    background: green;
+    color: white;
+    margin-left: 10px;
+    font-weight: bolder;
+}
+
+.add_button[disabled] {
+    background-color: red;
+}
+
+.delete_button {
+    height: 30px;
+    width: 75px;
+    background: red;
+    color: white;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.done_button {
+    padding: 0;
+    height: 30px;
+    width: 35px;
+    border: none;
+    background: none;
+    font-weight: 900;
+    color: white;
+}
+
+.hecho {
+    background: green;
+}
+
+.pendiente {
+    background: red;
+}
+
+button, button:focus, button:hover, button:active {
+    outline: none;
+    box-shadow:none;
+}
+
+table {
+    margin: 10px;
+}

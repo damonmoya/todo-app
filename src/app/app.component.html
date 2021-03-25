@@ -5,14 +5,14 @@
 
 <table>
   <tr class="head">
-    <td>Tarea</td>
-    <td>Prioridad</td>
-    <td>Hecho</td>
-    <td>Acciones</td>
+    <td class="table_text">Tarea</td>
+    <td class="table_text">Prioridad</td>
+    <td class="table_text">Hecho</td>
+    <td class="table_text">Acciones</td>
   </tr>
   <tr class="body" *ngFor="let todo of todos">
-    <td>{{todo.label}}</td>
-    <td>{{todo.priority}}</td>
+    <td class="table_text">{{todo.label}}</td>
+    <td class="table_text">{{todo.priority}}</td>
     <td [ngClass]="todo.done ? 'hecho':'pendiente'"><button class="done_button" (click)="updateDone(todo)">{{todo.done ? '&#10003;' : '&#10005;'}}</button></td>
     <td>
       <button (click)="deleteTodo(todo)" class="delete_button">Eliminar</button>

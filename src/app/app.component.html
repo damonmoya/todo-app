@@ -1,7 +1,11 @@
 <h1>{{title}}</h1>
 
-<input type="text" [(ngModel)]='newTodoLabel' #newTodo required/>
-<button class="add_button" [disabled]="!newTodoLabel" (click)="addTodo(newTodo.value); newTodo.value=''; newTodoLabel=''" > Añadir </button>
+<div class="d-flex align-items-center">
+  <input type="text" [(ngModel)]='newTodoLabel' #newTodo required/>
+  <button [ngClass]="!newTodoLabel ? 'add_button btn btn-danger':'add_button btn btn-success'" 
+  (click)="addTodo(newTodo.value); newTodo.value=''; newTodoLabel=''" > Añadir </button>
+</div>
+
 
 <table>
   <tr class="head">
@@ -15,7 +19,7 @@
     <td class="table_text">{{todo.priority}}</td>
     <td [ngClass]="todo.done ? 'hecho':'pendiente'"><button class="done_button" (click)="updateDone(todo)">{{todo.done ? '&#10003;' : '&#10005;'}}</button></td>
     <td>
-      <button (click)="deleteTodo(todo)" class="delete_button">Eliminar</button>
+      <button (click)="deleteTodo(todo)" class="delete_button btn btn-danger">Eliminar</button>
     </td>
   </tr>
 </table>
